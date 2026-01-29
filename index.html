@@ -12,71 +12,282 @@
       background: #0a0a0a;
       color: #ffffff;
       min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+      padding: 16px 24px;
+      backdrop-filter: blur(20px);
+      background: rgba(10,10,10,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
     }
+    .header-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #4ade80;
+    }
+    .header-links a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 14px;
+      margin-left: 24px;
+      transition: color 0.2s;
+    }
+    .header-links a:hover { color: #ffffff; }
+
+    /* Hero */
     .hero {
-      text-align: center;
-      padding: 80px 24px 60px;
-      max-width: 640px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 24px 60px;
     }
-    .logo {
-      font-size: 48px;
-      margin-bottom: 16px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      width: 100%;
     }
+    .hero-left { text-align: left; }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      margin-bottom: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #4ade80;
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Headline */
     h1 {
-      font-size: 56px;
+      font-size: 60px;
       font-weight: 800;
       letter-spacing: -2px;
-      margin-bottom: 16px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    h1 span {
       background: linear-gradient(135deg, #4ade80, #22c55e);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .tagline {
-      font-size: 22px;
+    .subtitle {
+      font-size: 20px;
       color: #a1a1aa;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+
+    /* CTAs */
+    .cta-row {
+      display: flex;
+      gap: 16px;
       margin-bottom: 40px;
     }
-    .price {
-      display: inline-block;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      border-radius: 100px;
-      padding: 12px 32px;
-      font-size: 18px;
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
       font-weight: 600;
-      color: #4ade80;
-      margin-bottom: 48px;
+      transition: transform 0.2s;
+      border: none;
+      cursor: pointer;
     }
-    .how-it-works {
-      max-width: 640px;
-      padding: 0 24px 60px;
-      text-align: center;
-    }
-    .how-it-works h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 40px;
+    .btn-primary:hover { transform: scale(1.05); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
       color: #ffffff;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid #333;
+      transition: border-color 0.2s;
+      cursor: pointer;
     }
-    .steps {
+    .btn-outline:hover { border-color: #555; }
+
+    /* Trust */
+    .trust {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      color: #a1a1aa;
+    }
+    .trust strong { color: #ffffff; }
+    .trust-item { display: flex; align-items: center; gap: 8px; }
+
+    /* Hero Right - Phone Mockup */
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .phone-mockup {
+      width: 280px;
+      height: 560px;
+      background: #111;
+      border-radius: 40px;
+      border: 3px solid #333;
+      padding: 20px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    }
+    .phone-notch {
+      position: absolute;
+      top: 12px;
+      width: 100px;
+      height: 24px;
+      background: #0a0a0a;
+      border-radius: 20px;
+    }
+    .phone-content {
+      text-align: center;
+    }
+    .phone-greeting {
+      font-size: 16px;
+      color: #a1a1aa;
+      margin-bottom: 8px;
+    }
+    .phone-status {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .checkin-btn {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 0 40px rgba(34,197,94,0.3);
+      margin: 0 auto 24px;
+      animation: glow 3s infinite;
+    }
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 40px rgba(34,197,94,0.2); }
+      50% { box-shadow: 0 0 60px rgba(34,197,94,0.4); }
+    }
+    .phone-time {
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* Floating cards */
+    .float-card {
+      position: absolute;
+      background: rgba(20,20,20,0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: float 4s ease-in-out infinite;
+    }
+    .float-card.top { top: 40px; right: -20px; animation-delay: 0s; }
+    .float-card.bottom { bottom: 60px; left: -20px; animation-delay: 1s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .float-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .float-icon.green { background: rgba(34,197,94,0.15); }
+    .float-icon.blue { background: rgba(59,130,246,0.15); }
+    .float-text { font-size: 13px; }
+    .float-text strong { display: block; color: #fff; }
+    .float-text span { color: #666; }
+
+    /* Sections */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-border { border-top: 1px solid #1a1a1a; }
+    .section h2 {
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+      letter-spacing: -1px;
+    }
+
+    /* How it works */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 32px;
     }
     .step {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      text-align: left;
+      text-align: center;
+      padding: 32px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 16px;
+      border: 1px solid #1a1a1a;
     }
     .step-num {
       width: 48px;
       height: 48px;
-      min-width: 48px;
       background: linear-gradient(135deg, #22c55e, #16a34a);
       border-radius: 50%;
       display: flex;
@@ -84,93 +295,31 @@
       justify-content: center;
       font-size: 20px;
       font-weight: 800;
+      margin: 0 auto 16px;
     }
-    .step-text h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .step-text p {
-      font-size: 15px;
-      color: #a1a1aa;
-    }
-    .features {
-      max-width: 640px;
-      padding: 40px 24px 60px;
-      border-top: 1px solid #222;
-    }
-    .features h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 32px;
-      text-align: center;
-    }
+    .step h3 { font-size: 18px; margin-bottom: 8px; }
+    .step p { font-size: 15px; color: #a1a1aa; line-height: 1.5; }
+
+    /* Features */
     .feature-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
     .feature {
-      padding: 20px;
-      background: rgba(255,255,255,0.03);
-      border-radius: 12px;
-      border: 1px solid #222;
+      padding: 28px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 16px;
+      border: 1px solid #1a1a1a;
+      transition: border-color 0.2s;
     }
-    .feature-icon {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-    .feature h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .feature p {
-      font-size: 14px;
-      color: #a1a1aa;
-      line-height: 1.4;
-    }
-    .cta {
-      text-align: center;
-      padding: 60px 24px;
-      border-top: 1px solid #222;
-      max-width: 640px;
-    }
-    .cta h2 {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-    .cta p {
-      font-size: 18px;
-      color: #a1a1aa;
-      margin-bottom: 32px;
-    }
-    .store-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: white;
-      text-decoration: none;
-      padding: 16px 40px;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: 700;
-      transition: transform 0.2s;
-    }
-    .store-btn:hover {
-      transform: scale(1.05);
-    }
-    .compare {
-      max-width: 640px;
-      padding: 40px 24px 60px;
-      border-top: 1px solid #222;
-      text-align: center;
-    }
-    .compare h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 32px;
-    }
+    .feature:hover { border-color: rgba(34,197,94,0.3); }
+    .feature-icon { font-size: 32px; margin-bottom: 12px; }
+    .feature h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+    .feature p { font-size: 14px; color: #a1a1aa; line-height: 1.5; }
+
+    /* Compare */
+    .compare-list { max-width: 480px; margin: 0 auto; }
     .compare-item {
       display: flex;
       justify-content: space-between;
@@ -178,78 +327,166 @@
       border-bottom: 1px solid #1a1a1a;
       font-size: 16px;
     }
-    .compare-item .name { color: #a1a1aa; }
+    .compare-item .name { color: #666; }
     .compare-item .price-tag { color: #ef4444; }
-    .compare-item.ours .name { color: #ffffff; font-weight: 600; }
-    .compare-item.ours .price-tag { color: #4ade80; font-weight: 600; }
+    .compare-item.ours .name { color: #ffffff; font-weight: 700; }
+    .compare-item.ours .price-tag { color: #4ade80; font-weight: 700; }
+
+    /* Final CTA */
+    .final-cta {
+      text-align: center;
+      padding: 80px 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .final-cta h2 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .final-cta p {
+      font-size: 18px;
+      color: #a1a1aa;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    /* Footer */
     footer {
       padding: 40px 24px;
       text-align: center;
-      color: #555;
+      color: #444;
       font-size: 14px;
-      border-top: 1px solid #222;
-      width: 100%;
+      border-top: 1px solid #1a1a1a;
     }
-    footer a { color: #777; text-decoration: none; }
-    footer a:hover { color: #aaa; }
-    @media (max-width: 480px) {
+    footer a { color: #666; text-decoration: none; }
+    footer a:hover { color: #999; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-left { text-align: center; }
+      .subtitle { margin: 0 auto 36px; }
+      .cta-row { justify-content: center; flex-wrap: wrap; }
+      .trust { justify-content: center; flex-wrap: wrap; }
       h1 { font-size: 40px; }
+      .steps { grid-template-columns: 1fr; }
       .feature-grid { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="logo">✅</div>
-    <h1>Still Here</h1>
-    <p class="tagline">One tap daily confirms you're okay.<br>Miss 48 hours? Your emergency contact is notified.</p>
-    <div class="price">$4.99/month — 75% less than competitors</div>
-  </div>
 
-  <div class="how-it-works">
+  <header>
+    <div class="header-logo">✅ Still Here</div>
+    <div class="header-links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="badge">
+          <div class="badge-dot"></div>
+          Safety for people who live alone
+        </div>
+
+        <h1>One Tap a Day.<br><span>Peace of Mind Forever.</span></h1>
+
+        <p class="subtitle">
+          The simplest safety app for people who live alone. Miss 48 hours? Your emergency contact is notified. No hardware, no hassle.
+        </p>
+
+        <div class="cta-row">
+          <a href="#" class="btn-primary">Coming Soon →</a>
+          <a href="#how" class="btn-outline">How it works</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <span>🛡️</span>
+            <span><strong>$4.99/mo</strong> — 75% less than competitors</span>
+          </div>
+          <div class="trust-item">
+            <span>🔒</span>
+            <span><strong>Privacy first</strong> — data stays on device</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-content">
+            <p class="phone-greeting">Good morning, Siamak</p>
+            <p class="phone-status">Time to check in</p>
+            <div class="checkin-btn">Still Here</div>
+            <p class="phone-time">Last check-in: 23h ago</p>
+          </div>
+        </div>
+
+        <div class="float-card top">
+          <div class="float-icon green">✓</div>
+          <div class="float-text">
+            <strong>Checked in!</strong>
+            <span>See you tomorrow</span>
+          </div>
+        </div>
+
+        <div class="float-card bottom">
+          <div class="float-icon blue">🐾</div>
+          <div class="float-text">
+            <strong>Pet info saved</strong>
+            <span>Luna (cat) added</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-border" id="how">
     <h2>How it works</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <div class="step-text">
-          <h3>Tap once a day</h3>
-          <p>Confirm you're okay with a single tap. Takes 2 seconds.</p>
-        </div>
+        <h3>Tap once a day</h3>
+        <p>Confirm you're okay with a single tap. Takes 2 seconds.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <div class="step-text">
-          <h3>We remind you</h3>
-          <p>Smart reminders at 24h. Life gets busy — we get it.</p>
-        </div>
+        <h3>We remind you</h3>
+        <p>Smart reminders at 24 hours. Life gets busy — we get it.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <div class="step-text">
-          <h3>Your contact is notified</h3>
-          <p>Miss 48 hours? We let your emergency contact know.</p>
-        </div>
+        <h3>Contact notified</h3>
+        <p>Miss 48 hours? We let your emergency contact know.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="features">
-    <h2>Features</h2>
+  <section class="section section-border" id="features">
+    <h2>Everything you need. Nothing you don't.</h2>
     <div class="feature-grid">
       <div class="feature">
         <div class="feature-icon">🔒</div>
         <h3>Privacy First</h3>
-        <p>Data stays on your device. No tracking, no selling.</p>
+        <p>Data stays on your device. No tracking, no selling, no ads.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🐾</div>
         <h3>Pet Safety</h3>
-        <p>Include pet info so they're cared for too.</p>
+        <p>Include pet details so they're cared for if something happens.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🏔️</div>
         <h3>Activity Mode</h3>
-        <p>Going hiking? Set a timed check-in.</p>
+        <p>Going hiking? Set a timed check-in for extra safety.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">✈️</div>
@@ -259,44 +496,49 @@
       <div class="feature">
         <div class="feature-icon">📴</div>
         <h3>Works Offline</h3>
-        <p>Check in anywhere. Syncs when connected.</p>
+        <p>Check in anywhere. Syncs when you're connected.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">😊</div>
         <h3>Mood Tracking</h3>
-        <p>Optional daily mood log. See your patterns.</p>
+        <p>Optional daily mood log. See your patterns over time.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="compare">
-    <h2>Why us?</h2>
-    <div class="compare-item">
-      <span class="name">Snug Premium</span>
-      <span class="price-tag">$19.99/mo</span>
+  <section class="section section-border" id="pricing">
+    <h2>Why Still Here?</h2>
+    <div class="compare-list">
+      <div class="compare-item">
+        <span class="name">Snug Premium</span>
+        <span class="price-tag">$19.99/mo</span>
+      </div>
+      <div class="compare-item">
+        <span class="name">Circle Alert</span>
+        <span class="price-tag">$10+/mo</span>
+      </div>
+      <div class="compare-item">
+        <span class="name">Life Alert</span>
+        <span class="price-tag">$50+/mo</span>
+      </div>
+      <div class="compare-item ours">
+        <span class="name">Still Here ✅</span>
+        <span class="price-tag">$4.99/mo</span>
+      </div>
     </div>
-    <div class="compare-item">
-      <span class="name">Circle Alert</span>
-      <span class="price-tag">$10+/mo</span>
-    </div>
-    <div class="compare-item">
-      <span class="name">Life Alert</span>
-      <span class="price-tag">$50+/mo</span>
-    </div>
-    <div class="compare-item ours">
-      <span class="name">Still Here ✅</span>
-      <span class="price-tag">$4.99/mo</span>
-    </div>
-  </div>
+  </section>
 
-  <div class="cta">
-    <h2>36 million Americans live alone.</h2>
-    <p>Most share the same quiet fear: "What if something happens and no one notices?"</p>
-    <a href="#" class="store-btn">Coming Soon to App Stores</a>
+  <div class="section-border">
+    <div class="final-cta">
+      <h2>36 million Americans live alone.</h2>
+      <p>Most share the same quiet fear: "What if something happens and no one notices for days?"</p>
+      <a href="#" class="btn-primary">Coming Soon to App Stores →</a>
+    </div>
   </div>
 
   <footer>
     <p>&copy; 2026 Still Here &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/delete-data.html">Delete Data</a></p>
   </footer>
+
 </body>
 </html>
