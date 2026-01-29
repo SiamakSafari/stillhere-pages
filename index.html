@@ -3,162 +3,300 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Still Here</title>
+  <title>Still Here — Peace of mind for people who live alone</title>
+  <meta name="description" content="One tap daily confirms you're okay. Miss 48 hours? Your emergency contact is notified. $4.99/month.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #1a1a1a;
-      background: #f9fafb;
-      line-height: 1.7;
-      padding: 0 1rem;
-    }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 3rem 0 4rem;
-    }
-    .brand {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.25rem;
     }
-    .brand-dot {
-      width: 12px; height: 12px;
-      background: #22c55e;
-      border-radius: 50%;
-      display: inline-block;
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      max-width: 640px;
     }
-    .brand-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #22c55e;
-      letter-spacing: 0.02em;
+    .logo {
+      font-size: 48px;
+      margin-bottom: 16px;
     }
     h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 0.25rem;
+      font-size: 56px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #4ade80, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .effective {
-      color: #6b7280;
-      font-size: 0.9rem;
-      margin-bottom: 2.5rem;
+    .tagline {
+      font-size: 22px;
+      color: #a1a1aa;
+      line-height: 1.5;
+      margin-bottom: 40px;
     }
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #111;
-      margin: 2rem 0 0.75rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e5e7eb;
-    }
-    h2:first-of-type { border-top: none; padding-top: 0; }
-    p, li { color: #374151; font-size: 1rem; }
-    p { margin-bottom: 0.75rem; }
-    ul { margin: 0.5rem 0 1rem 1.25rem; }
-    li { margin-bottom: 0.35rem; }
-    .badge {
+    .price {
       display: inline-block;
-      background: #dcfce7;
-      color: #166534;
-      font-size: 0.8rem;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 100px;
+      padding: 12px 32px;
+      font-size: 18px;
       font-weight: 600;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      margin-bottom: 1.5rem;
+      color: #4ade80;
+      margin-bottom: 48px;
     }
-    .highlight-box {
-      background: #f0fdf4;
-      border-left: 3px solid #22c55e;
-      padding: 1rem 1.25rem;
-      border-radius: 0 8px 8px 0;
-      margin: 1rem 0;
+    .how-it-works {
+      max-width: 640px;
+      padding: 0 24px 60px;
+      text-align: center;
     }
-    .highlight-box p { margin-bottom: 0; color: #166534; }
-    a { color: #22c55e; text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-    .footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e5e7eb;
-      color: #9ca3af;
-      font-size: 0.85rem;
+    .how-it-works h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #ffffff;
     }
-    .footer a { color: #9ca3af; }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .step-text h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .step-text p {
+      font-size: 15px;
+      color: #a1a1aa;
+    }
+    .features {
+      max-width: 640px;
+      padding: 40px 24px 60px;
+      border-top: 1px solid #222;
+    }
+    .features h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .feature {
+      padding: 20px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      border: 1px solid #222;
+    }
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .feature p {
+      font-size: 14px;
+      color: #a1a1aa;
+      line-height: 1.4;
+    }
+    .cta {
+      text-align: center;
+      padding: 60px 24px;
+      border-top: 1px solid #222;
+      max-width: 640px;
+    }
+    .cta h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      font-size: 18px;
+      color: #a1a1aa;
+      margin-bottom: 32px;
+    }
+    .store-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+    .store-btn:hover {
+      transform: scale(1.05);
+    }
+    .compare {
+      max-width: 640px;
+      padding: 40px 24px 60px;
+      border-top: 1px solid #222;
+      text-align: center;
+    }
+    .compare h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+    .compare-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid #1a1a1a;
+      font-size: 16px;
+    }
+    .compare-item .name { color: #a1a1aa; }
+    .compare-item .price-tag { color: #ef4444; }
+    .compare-item.ours .name { color: #ffffff; font-weight: 600; }
+    .compare-item.ours .price-tag { color: #4ade80; font-weight: 600; }
+    footer {
+      padding: 40px 24px;
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      border-top: 1px solid #222;
+      width: 100%;
+    }
+    footer a { color: #777; text-decoration: none; }
+    footer a:hover { color: #aaa; }
+    @media (max-width: 480px) {
+      h1 { font-size: 40px; }
+      .feature-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="brand"><span class="brand-dot"></span><span class="brand-name">Still Here</span></div>
-    <h1>Privacy Policy</h1>
-    <p class="effective">Effective date: June 28, 2025</p>
-    <span class="badge">No ads · No tracking · No data sales</span>
+  <div class="hero">
+    <div class="logo">✅</div>
+    <h1>Still Here</h1>
+    <p class="tagline">One tap daily confirms you're okay.<br>Miss 48 hours? Your emergency contact is notified.</p>
+    <div class="price">$4.99/month — 75% less than competitors</div>
+  </div>
 
-    <h2>Introduction</h2>
-    <p>Still Here is a daily check-in safety app designed for people living alone. Your safety and privacy are equally important to us. This policy explains what data we collect, how we use it, and how we protect it.</p>
-    <p>Still Here is developed by <strong>Siamak Safari</strong>.</p>
-
-    <h2>Data We Collect</h2>
-    <p>We collect only what's necessary to keep the app working for you:</p>
-    <ul>
-      <li><strong>Account information</strong> — your name and email address</li>
-      <li><strong>Emergency contact information</strong> — name, phone number, and/or email of your designated contact(s)</li>
-      <li><strong>Check-in history</strong> — timestamps of your daily check-ins</li>
-      <li><strong>Mood data</strong> (optional) — if you choose to log how you're feeling</li>
-    </ul>
-
-    <h2>Data We Do NOT Collect</h2>
-    <div class="highlight-box">
-      <p>We never collect your location, health data, browsing activity, contacts list, photos, or any other data beyond what's listed above.</p>
-    </div>
-
-    <h2>Where Your Data Is Stored</h2>
-    <p>We follow a <strong>local-first</strong> approach:</p>
-    <ul>
-      <li><strong>On your device</strong> — your check-in history, mood data, and account info are stored locally on your phone.</li>
-      <li><strong>On our server</strong> — only your emergency contact information is stored on our server, so we can reach them if you miss a check-in.</li>
-    </ul>
-    <p>Server data is encrypted in transit and at rest.</p>
-
-    <h2>How We Use Your Data</h2>
-    <ul>
-      <li>To deliver check-in reminders and track your daily status</li>
-      <li>To contact your emergency contact(s) if you miss a check-in</li>
-      <li>To display your check-in history and mood trends within the app</li>
-    </ul>
-
-    <h2>What We Never Do</h2>
-    <ul>
-      <li>We do <strong>not</strong> sell your data to anyone</li>
-      <li>We do <strong>not</strong> share your data with third parties</li>
-      <li>We do <strong>not</strong> display ads or use ad-tracking services</li>
-      <li>We do <strong>not</strong> use your data for profiling or marketing</li>
-    </ul>
-
-    <h2>Data Retention &amp; Deletion</h2>
-    <p>Your data is retained as long as your account is active. You can request deletion of all your data at any time by emailing <a href="mailto:support@stillhere.app">support@stillhere.app</a>. We will process deletion requests within 30 days.</p>
-    <p>See our <a href="/delete-data.html">Data Deletion page</a> for details.</p>
-
-    <h2>Children's Privacy</h2>
-    <p>Still Here is intended for users aged 18 and older. We do not knowingly collect data from children under 18. If we learn that we have collected data from a minor, we will promptly delete it.</p>
-
-    <h2>Security</h2>
-    <p>We use industry-standard security measures including encrypted connections (TLS), secure server infrastructure, and minimal data collection to protect your information.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>We may update this policy from time to time. If we make significant changes, we'll notify you through the app. The effective date at the top will always reflect the latest version.</p>
-
-    <h2>Contact Us</h2>
-    <p>Questions or concerns about your privacy? Reach us at:</p>
-    <p><a href="mailto:support@stillhere.app">support@stillhere.app</a></p>
-
-    <div class="footer">
-      <p>&copy; 2025 Siamak Safari. All rights reserved.</p>
-      <p style="margin-top:0.25rem;"><a href="/delete-data.html">Data Deletion</a></p>
+  <div class="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Tap once a day</h3>
+          <p>Confirm you're okay with a single tap. Takes 2 seconds.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>We remind you</h3>
+          <p>Smart reminders at 24h. Life gets busy — we get it.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Your contact is notified</h3>
+          <p>Miss 48 hours? We let your emergency contact know.</p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>Data stays on your device. No tracking, no selling.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🐾</div>
+        <h3>Pet Safety</h3>
+        <p>Include pet info so they're cared for too.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏔️</div>
+        <h3>Activity Mode</h3>
+        <p>Going hiking? Set a timed check-in.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✈️</div>
+        <h3>Vacation Mode</h3>
+        <p>Traveling? Pause alerts with one tap.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📴</div>
+        <h3>Works Offline</h3>
+        <p>Check in anywhere. Syncs when connected.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">😊</div>
+        <h3>Mood Tracking</h3>
+        <p>Optional daily mood log. See your patterns.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <h2>Why us?</h2>
+    <div class="compare-item">
+      <span class="name">Snug Premium</span>
+      <span class="price-tag">$19.99/mo</span>
+    </div>
+    <div class="compare-item">
+      <span class="name">Circle Alert</span>
+      <span class="price-tag">$10+/mo</span>
+    </div>
+    <div class="compare-item">
+      <span class="name">Life Alert</span>
+      <span class="price-tag">$50+/mo</span>
+    </div>
+    <div class="compare-item ours">
+      <span class="name">Still Here ✅</span>
+      <span class="price-tag">$4.99/mo</span>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>36 million Americans live alone.</h2>
+    <p>Most share the same quiet fear: "What if something happens and no one notices?"</p>
+    <a href="#" class="store-btn">Coming Soon to App Stores</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Still Here &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/delete-data.html">Delete Data</a></p>
+  </footer>
 </body>
 </html>
